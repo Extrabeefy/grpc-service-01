@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package metadata.v1;
+
+option go_package = "/metadata";
+
+// Metadata Service
+service Metadata {
+	rpc GetMetadata(Message) returns (Message) {};
+}
+
+message Message {
+	string correlationId = 1;
+}
